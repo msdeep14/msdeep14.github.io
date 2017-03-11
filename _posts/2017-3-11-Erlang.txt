@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello World
+title: How Smartly Erlang uses Distributed Computing
 ---
 
 The construction of computer systems consisting of more than one computer is becoming more common. The complexity of such systems is higher than single computer systems.
