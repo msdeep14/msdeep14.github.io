@@ -22,26 +22,26 @@ footer-links:
   facebook: msdeep14
   flickr:
   github: msdeep14
-  instagram:
+  instagram: msdeep14
   linkedin: msdeep14
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: msdeep14
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  stackoverflow: users/6942060/mandeep-singh # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
+  googleplus: u/0/+mandeepsinghmsdeep14 # anything in your profile username that comes after plus.google.com/
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus:
+disqus: disqus_mUTQHwuXuY
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-100412500-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: "http://mandeepsinghshekhawat.com"
+url: "https://msdeep14.github.io/"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
