@@ -5,5 +5,3 @@ permalink: /projects/
 ---
 
 {% include projects.html %}
-
-
