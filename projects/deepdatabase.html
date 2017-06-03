@@ -8,24 +8,19 @@ permalink: /projects/deepdatabase
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style type="text/css">
-.frame {
-     height: 200px;
-      width: 200px;
-       overflow: hidden;
+.zoomin img {
+    height: 200px;
+     width: 200px;
+     -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+       transition: all 2s ease;
        }
-       .zoomin img {
-           height: 200px;
-           width: 200px;
-           -webkit-transition: all 2s ease;
-           -moz-transition: all 2s ease;
-            -ms-transition: all 2s ease;
-             transition: all 2s ease;
-             }
-             .zoomin img:hover {
-                 width: 300px;
-                  height: 300px; }
-
-                  </style>
+       .zoomin img:hover {
+           width: 300px;
+           height: 300px;
+           }
+           </style>
 </head>
 
 <body>
@@ -42,7 +37,8 @@ permalink: /projects/deepdatabase
             6) B+ tree search based on primary key and brute force search for other attributes of table <br />
         </p>
     </h4>
-    <div class="zoomin frame">
+
+     <div class="zoomin">
          <img src="{{ site.baseurl }}/images/project_images/deepdb/startdb.png" title="start deepdb monitor" />
      </div>
 
