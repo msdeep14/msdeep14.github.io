@@ -1,11 +1,67 @@
 
 <head>
-    <title>Projects</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <h1><center>Projects</center></h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+    .images {
+        text-align : center;
+    }
+    .images img {
+        width  : 200px;
+        height : 200x;
+        margin : 10px;
+    }
+    </style>
+    <script>
+   $('.CLASSNAME').addClass('animated fadeIn');
+</script>
 </head>
 
 
 <body>
+    <div class="images">
+
+    <style type="text/css">
+
+    a.hovertext {
+        position: relative;
+        width: 500px;
+        text-decoration: none !important;
+        text-align: center;
+    }
+    a.hovertext::after {
+        content: attr(title);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0.5em 20px;
+        width: 460px;
+        background: rgba(0,0,0,0.8);
+        text-decoration: none !important;
+        color: #fff;
+        opacity: 0;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+        -ms-transition: 0.5s;
+    }
+    a.hovertext:hover::after, a.hovertext:focus::after {
+        opacity: 1.0;
+}
+
+</style>
+
+    <a class="hovertext" href="{{ site.baseurl }}/projects/deepdatabase.html" title="DeepDataBase"><img src="{{ site.baseurl }}/images/deepdatabase.png" width="700" height="200" border="0" alt=""></a>
+
+    <a class="hovertext" href="{{ site.baseurl }}/projects/irctc.html" title="IRCTC"><img src="{{ site.baseurl }}/images/deepdatabase.png" width="700" height="200" border="0" alt=""></a>
+
+    <a class="hovertext" href="{{ site.baseurl }}/projects/tripcount.html" title="Tripcount"><img src="{{ site.baseurl }}/images/deepdatabase.png" width="700" height="200" border="0" alt=""></a>
+
+
+    </div>
+
+
+
         <h4>
             <a href="{{ site.baseurl }}/projects/deepdatabase.html"><img src="{{ site.baseurl }}/images/deepdatabase.png" title = "DeepDataBase" height = "200" width = "200"/>DeepDataBase</a>
         </h4>
