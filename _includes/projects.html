@@ -15,43 +15,44 @@
     <script>
    $('.CLASSNAME').addClass('animated fadeIn');
 </script>
+
+<style type="text/css">
+
+a.hovertext {
+    position: relative;
+    width: 500px;
+    text-decoration: none !important;
+    text-align: center;
+}
+a.hovertext::after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0.5em 20px;
+    width: 460px;
+    background: rgba(0,0,0,0.8);
+    text-decoration: none !important;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+}
+a.hovertext:hover::after, a.hovertext:focus::after {
+    opacity: 1.0;
+}
+
+</style>
 </head>
 
 
 <body>
     <br />
-    <br />
     <div class="images">
 
-    <style type="text/css">
 
-    a.hovertext {
-        position: relative;
-        width: 500px;
-        text-decoration: none !important;
-        text-align: center;
-    }
-    a.hovertext::after {
-        content: attr(title);
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 0.5em 20px;
-        width: 460px;
-        background: rgba(0,0,0,0.8);
-        text-decoration: none !important;
-        color: #fff;
-        opacity: 0;
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -o-transition: 0.5s;
-        -ms-transition: 0.5s;
-    }
-    a.hovertext:hover::after, a.hovertext:focus::after {
-        opacity: 1.0;
-}
-
-</style>
 
     <a class="hovertext" href="{{ site.baseurl }}/projects/deepdatabase.html" title="DeepDataBase"><img src="{{ site.baseurl }}/images/project_images/deepdb.png" width="700" height="200" border="0" alt=""></a>
 
