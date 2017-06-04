@@ -6,6 +6,32 @@ permalink: /projects/tripcount
 <head>
     <title>Tripcount</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+.zoomin img {
+    height: 200px;
+     width: 200px;
+     -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+       transition: all 2s ease;
+       }
+       .zoomin img:hover {
+           width: 600px;
+           height: 600px;
+           }
+
+           .images {
+               text-align : center;
+           }
+           .images img {
+               width  : 200px;
+               height : 200x;
+               margin : 10px;
+           }
+
+           .tab { margin-left: 40px; }
+    </style>
 </head>
 
 <body>
@@ -14,11 +40,44 @@ permalink: /projects/tripcount
         </h1>
         <h4>
             <p>
-            An android app for managing all your group trips and day to day expenses<br/>
-			1)App contains two modules : day2day expenses and Trip expenses<br/>
-			2) While on Trip, add money paid by any of friend and Tripcount has inbuilt algorithm which automatically calculates which friend owes money to whom and how they can settle the payments.<br/>
-			3)It also keeps track of day to day expenses, you can add expenses for a particular friend and it will show total amount owed by that friend.<br/>
+            An android app for managing day to day expenses with friends<br/>
+            It also helps in managing and splitting the bills during group trips<br />
 		</p>
     </h4>
+
+    <div class="images">
+        <div class = "zoomin">
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/mainscreen.png" title="mainscreen of app" />
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/about_us.png" title="about us" />
+            <br />
+            <br />
+
+            <h4>
+                The app has two features:
+            </h4>
+            <h3>1. Manage and split group expenses</h3>
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/added_trips.png" title="Added trips" />
+
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/add_new_trip_1.png" title="add a new trip" />
+
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/add_new_trip_2.png" title="add a new trip" />
+            <br />
+            <br />
+
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/add_new_Expense_for_trip.png" title="Add new expense for a trip" />
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/show_Expenses_for_trip.png" title="show expenses of trip" />
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/balances_Expenses_for_trip.png" title="balance expenses of trip" />
+
+            <br />
+            <br />
+            <h3>2. Manage day to day expenses with friends</h3>
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/display_friendlist.png" title="display friendlist" />
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/display_friend_Expenses.png" title="display friend expenses" />
+            <img src="{{ site.baseurl }}/images/project_images/tripcount/add_new_Expense_for_friend.png" title="add new expense for a friend" />
+
+
+
+        </div>
+    </div>
 
 </body>

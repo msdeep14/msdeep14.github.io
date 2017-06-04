@@ -6,6 +6,31 @@ permalink: /projects/travel_data_analysis
 <head>
     <title> Travel Data Analysis</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+.zoomin img {
+    height: 200px;
+     width: 200px;
+     -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+       transition: all 2s ease;
+       }
+       .zoomin img:hover {
+           width: 600px;
+           height: 600px;
+           }
+
+           .images {
+               text-align : center;
+           }
+           .images img {
+               width  : 200px;
+               height : 200x;
+               margin : 10px;
+           }
+
+           .tab { margin-left: 40px; }
+    </style>
 </head>
 
 <body>
@@ -13,8 +38,23 @@ permalink: /projects/travel_data_analysis
             <i class="fa fa-github"></i>&nbsp;&nbsp;<strong><a href= "https://github.com/msdeep14/Travel-Data-Analysis">Travel Data Analysis</a></strong><br/>
         <h4>
             <p>
-			From a large data file, the system extracts data using Pig tool and analyze top 20 and least 20 travelled destinations using R programming.<br/>
+                This is hadoop based project on big data analysis<br />
+
+			The system extracts data from a large data file using Pig tool and analyze top 20 and least 20 travelled destinations using R programming<br/>
 		</p>
     </h4>
+    <div class = "images">
+     <div class="zoomin">
 
+     <img src="{{ site.baseurl }}/images/project_images/travel_data/least20.png" title="least 20 visited places" />
+      <img src="{{ site.baseurl }}/images/project_images/travel_data/top20.png" title="top 20 visited places" />
+      <br />
+      <br />
+      <img src="{{ site.baseurl }}/images/project_images/travel_data/top20_1.png" title="top 20 visited places, terminal view" />
+
+      <img src="{{ site.baseurl }}/images/project_images/travel_data/top20_2.png" title="top 20 visited places, bar graph" />
+      <img src="{{ site.baseurl }}/images/project_images/travel_data/top20.png" title="top 20 visited places, pie chart" />
+
+  </div>
+  </div>
 </body>
