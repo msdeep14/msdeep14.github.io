@@ -6,6 +6,32 @@ permalink: /projects/2048
 <head>
     <title>2048</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+.zoomin img {
+    height: 200px;
+     width: 200px;
+     -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+       transition: all 2s ease;
+       }
+       .zoomin img:hover {
+           width: 600px;
+           height: 600px;
+           }
+
+           .images {
+               text-align : center;
+           }
+           .images img {
+               width  : 200px;
+               height : 200x;
+               margin : 10px;
+           }
+
+           .tab { margin-left: 40px; }
+    </style>
 </head>
 
 <body>
@@ -14,7 +40,23 @@ permalink: /projects/2048
         <h4>
             <p>
              Popular game 2048 developed in C++ for applying basic OOP concepts.<br/>
+             Operations supported <br/>
+             <p class="tab">
+                 1) continue playing upto one of the block score reaches 2048<br/>
+                 2) restart game <br />
+                 3) undo to previous step (max 5 times allowed)
+             </p>
          </p>
     </h4>
+
+    <div class = "images">
+        <div class = "zoomin">
+            <img src="{{ site.baseurl }}/images/project_images/2048/start.png" title="start 2048" />
+            <br />
+            <br />
+            <img src="{{ site.baseurl }}/images/project_images/2048/score.png" title="continue playing 2048" />
+            <img src="{{ site.baseurl }}/images/project_images/2048/quit.png" title="quit 2048" />
+        </div>
+    </div>
 
 </body>
