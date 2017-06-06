@@ -9,7 +9,7 @@ are done by me :smiley:
 I learnt many things during this process, like arranging multiple images side by side and create a hovering effect over them
 also embedding the css code with html.
 
-I also enabled discus comments sections below my posts, so you can comment upon my posts and give suggestions over any further improvements in the website, the way it is designed.
+I also enabled disqus comments sections below my posts, so you can comment upon my posts and give suggestions over any further improvements in the website, the way it is designed.
 
 However, the html+css coding is not as adventrous as my favourite languages c++ and erlang :blush:
 
