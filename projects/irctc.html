@@ -6,6 +6,32 @@ permalink: /projects/irctc
 <head>
     <title> IRCTC</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+.zoomin img {
+    height: 200px;
+     width: 200px;
+     -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+       transition: all 2s ease;
+       }
+       .zoomin img:hover {
+           width: 600px;
+           height: 600px;
+           }
+
+           .images {
+               text-align : center;
+           }
+           .images img {
+               width  : 200px;
+               height : 200x;
+               margin : 10px;
+           }
+
+           .tab { margin-left: 40px; }
+    </style>
 </head>
 
 <body>
@@ -13,13 +39,51 @@ permalink: /projects/irctc
             <i class="fa fa-github"></i>&nbsp;&nbsp;<strong><a href="https://github.com/msdeep14/IRCTC">IRCTC</a></strong> <br/>
         </h1>
         <h4>
-            <p>IRCTC like Ticket Booking System developed in C++ using Qt Framework<br/>
-			1)Data encryption algorithm is used for storing encrypted passwords of users and binary Search is used for verifying 	username and password.<br/>
-			2)For querying trains between stations, system will show all the available trains on and in case no direct trains are available, it will display indirect trains calculated using graph algorithms.<br/>
-			3)System takes care of cycles within the graph efficiently.<br/>
-			4)Simple payment system is designed for payment of ticket and then displaying of ticket.<br/>
-			5)Data is stored using files<br/>
+            <p>IRCTC like Ticket Booking System developed in C++ using Qt framework<br /><br />
+                <p class = "tab">
+			1) Data encryption algorithm is used for storing passwords of users and binary search algorithm is used for verifying username and password.<br/>
+			2) For querying trains between stations, system will show all the available trains on and in case no direct trains are available, it will display indirect trains calculated using graph algorithms.<br/>
+			3) System takes care of cycles within the graph efficiently.<br/>
+			4) Simple payment system is designed for payment of ticket and then displaying of ticket.<br/>
+			5) Data storage using files<br/>
+        </p>
 		</p>
     </h4>
+
+    <div class = "images">
+     <div class="zoomin">
+         <h3>open IRCTC</h3><br />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/start.png" title="open irctc portal" />
+         <br /> <br />
+         <h3>signup or login to IRCTC portal</h3><br />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/signup.png" title="signup" />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/login.png" title="login" />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/invalid_user.png" title="invalid user details" />
+         <br /><br />
+
+         <h3>plan journey and show availability of trains</h3><br />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/plan_journey.png" title="plan journey" />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/train_available.png" title="display avalaible trains" />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/train_not_available.png" title="train not available" />
+         <br /><br />
+
+         <h3>if there are no direct trains, display indirect trains which can be taken</h3>
+         <img src="{{ site.baseurl }}/images/project_images/irctc/indirect1.png" title="plan journey" />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/indirect2.png" title="show indirect trains" />
+         <br /><br />
+
+     <h3>enter 1 or more passenger details</h3>
+         <img src="{{ site.baseurl }}/images/project_images/irctc/pdetails_1.png" title="enter passenger details" />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/pdetails_2.png" title="entered passenger details" />
+         <br /><br />
+
+         <h3>proceed for the payment and print ticket</h3>
+         <img src="{{ site.baseurl }}/images/project_images/irctc/payment.png" title="payment" />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/carddetails.png" title="enter card details" />
+         <img src="{{ site.baseurl }}/images/project_images/irctc/print_ticket.png" title="print ticket" />
+         <br />
+
+     </div>
+ </div>
 
 </body>
