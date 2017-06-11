@@ -6,6 +6,32 @@ permalink: /projects/bytecode
 <head>
     <title>ByteCode</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+.zoomin img {
+    height: 200px;
+     width: 200px;
+     -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+       transition: all 2s ease;
+       }
+       .zoomin img:hover {
+           width: 600px;
+           height: 600px;
+           }
+
+           .images {
+               text-align : center;
+           }
+           .images img {
+               width  : 200px;
+               height : 200x;
+               margin : 10px;
+           }
+
+           .tab { margin-left: 40px; }
+    </style>
 </head>
 
 <body>
@@ -20,5 +46,28 @@ permalink: /projects/bytecode
                 3) word-by-word undo operation<br/>
         </p>
     </h4>
+
+    <div class = "images">
+     <div class="zoomin">
+         <h3>Basic file operations</h3>
+         <img src="{{ site.baseurl }}/images/project_images/bytecode/enter_save.png" title="enter contents and save file" />
+
+         <img src="{{ site.baseurl }}/images/project_images/bytecode/readfile.png" title="read contents of existing file" />
+
+         <img src="{{ site.baseurl }}/images/project_images/bytecode/enter_existing_save.png" title="enter contents to existing file and save" />
+         <br /> <br />
+         <h3>undo operation</h3>
+         <img src="{{ site.baseurl }}/images/project_images/bytecode/undo1.png" title="do undo operation" />
+         <img src="{{ site.baseurl }}/images/project_images/bytecode/undo2.png" title="removal of one word after undo operation from file" />
+
+         <br /> <br />
+         <h3>copy and paste operation</h3>
+         <img src="{{ site.baseurl }}/images/project_images/bytecode/copy.png" title="copy last line of file" />
+         <img src="{{ site.baseurl }}/images/project_images/bytecode/paste.png" title="paste the copied line to end of file" />
+         <br /><br />
+
+
+     </div>
+ </div>
 
 </body>
