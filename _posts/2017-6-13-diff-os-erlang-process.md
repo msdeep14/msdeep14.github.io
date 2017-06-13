@@ -9,18 +9,19 @@ Before you develop any misconceptions, understand this **These both are differen
 
 ## What's the reason?
 
-1. Erlang's processes are different from OS processes
+#### 1. Erlang's processes are different from OS processes
 
 The processes of Erlang are created and scheduled by Erlang virtual machine(BEAM), the processes in C or Java are typical OS processes which are completely managed by operating system.
 
-2. Dynamic allocation
+#### 2. Dynamic allocation
 
 The minimum memory allocated for a OS process is 64K, which is very large for a light weight process which is few bytes of memory. Erlang processes use dynamically allocated stacks, which initially are very small and grow afterwards according to the need.
 
 From [here](http://www.infoq.com/presentations/erlang-software-for-a-concurrent-world)
+
 [Erlang] is a concurrent language – by that I mean that threads are part of the programming language, they do not belong to the operating system. That's really what's wrong with programming languages like Java and C++. It's threads aren't in the programming language, threads are something in the operating system – and they inherit all the problems that they have in the operating system. One of the problems is granularity of the memory management system. The memory management in the operating system protects whole pages of memory, so the smallest size that a thread can be is the smallest size of a page. That's actually too big. If you add more memory to your machine – you have the same number of bits that protects the memory so the granularity of the page tables goes up – you end up using say 64kB for a process you know running in a few hundred bytes.
 
-3. Context switching
+#### 3. Context switching
 
 Switching between Erlang processes, takes about 16 instructions and 20 nanoseconds on a modern processor. Also you often know the process pid you are switching to(example: a process receiving a message in its queue can be implemented as straight hand off from the calling process to the receiving process), so the scheduler has no role to play in this hence making it `O(1)` operation.
 
@@ -30,7 +31,7 @@ Therefore, Erlang processes are faster as compared to OS threads because Erlang 
 
 The author **Joe Armstrong** built a multithreaded Apache server and his study showed that Apache maxed out just under 8K processes, while his hand written Erlang server handled 10K+ processes, [find link here](https://web.archive.org/web/20151104142503/https://www.sics.se/~joe/apachevsyaws.html)
 
-4. Isolation
+#### 4. Isolation
 
 Erlang separates each processes's running context in terms of scheduling time, memory access and reference visibility and in doing so simplifies each component of algorithm by isolating it completely.
 
@@ -48,3 +49,5 @@ From [here](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&re
 2. We see that for up to 30,000 processes the time to send a message between two Erlang processes is about 0.8µs. For C# it takes about 50µs per message, up to the maximum number of processes (which was about 1800 processes). Java was even worse, for up to 100 process it took about 50µs per message thereafter it increased rapidly to 10ms per message when there were about 1000 Java processes.
 
 ![see image](https://github.com/msdeep14/How-Smartly-Erlang-Uses-Distributed-Computing/blob/master/images/message_passing_time.png)
+
+#### *Remember that both are different programming paradigms and both have their roles to play.
