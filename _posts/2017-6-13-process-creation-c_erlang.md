@@ -86,9 +86,9 @@ For executing above Erlang code, save the file as *process_erlang.erl* then
   
  At the place of `100` in step 3, you can set value of choice depending on number of processes.
  
- ## Comparison of process creation time
+## Comparison of process creation time
  
- Processes of Erlang are very light weight as compared to processes of C and thus time taken by Erlang processes is very less as compared to in C, see graph images for comparison of process creation time in Erlang, Java and C# [here](https://msdeep14.github.io/projects/erlang_dcomputing.html)
+Processes of Erlang are very light weight as compared to processes of C and thus time taken by Erlang processes is very less as compared to in C, see graph images for comparison of process creation time in Erlang, Java and C# [here](https://msdeep14.github.io/projects/erlang_dcomputing.html)
 
 Try out yourself in the C program set `numProcess = 100`, your system will stop responding and you need to restart the system, instead in case of Erlang set value to `200` instead of `100` and all the processes will be created within a second(didn't calculated actual time).
 
