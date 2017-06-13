@@ -6,16 +6,16 @@
 <body>
   <p>
     Process is the running instance of program, so to execute any program we need to create a process, there are various defined proceduces depending on language for creation of process.<br />
-    For example in C, we use `fork` and `spawn` in Erlang.<br />
-    If you are a computer science student, you might have come across the term `fork` in your operating systems course, as far as **Erlang** is concerned you might not have heard about it.<br />
+    For example in C, we use <code>fork</code> and <code>spawn</code> in Erlang.<br />
+    If you are a computer science student, you might have come across the term <code>fork</code> in your operating systems course, as far as <strong>Erlang</strong> is concerned you might not have heard about it.<br />
     Before I go to the process creation in both the languages, I will encourage you to read something about Erlang on internet. <br />
 
     <h3>Process creation in C</h3>
 
   </p>
 
-  <pre class='brush: cpp'>
-  
+
+  <xmp>
   #include <stdio.h>   /* printf, stderr, fprintf */
   #include <sys/types.h> /* pid_t */
   #include <unistd.h>  /* _exit, fork */
@@ -52,11 +52,5 @@
   }
   return 0;
 }
-  </pre>
-
-  <script src="js/shCore.js"></script>
-  <script src="js/shBrushCpp.js"></script>
-  <script>
-    SyntaxHighlighter.all()
-  </script>
+ </xmp>
 </body>
