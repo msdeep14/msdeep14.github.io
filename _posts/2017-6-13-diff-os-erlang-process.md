@@ -44,10 +44,12 @@ From [here](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&re
 
 1. We observe that the time taken to create an Erlang process is constant 1µs up to 2,500 processes; thereafter it increases to about 3µs for up to 30,000 processes. The performance of Java and C# is shown at the top of the figure. For a small number of processes it takes about 300µs to create a process. Creating more than two thousand processes is impossible.
 
-![see image](https://github.com/msdeep14/How-Smartly-Erlang-Uses-Distributed-Computing/blob/master/images/process_creation_time.png)
+![see image](https://github.com/msdeep14/How-Smartly-Erlang-Uses-Distributed-Computing/blob/master/images/process_creation_time.png){:class="img-responsive"}
 
 2. We see that for up to 30,000 processes the time to send a message between two Erlang processes is about 0.8µs. For C# it takes about 50µs per message, up to the maximum number of processes (which was about 1800 processes). Java was even worse, for up to 100 process it took about 50µs per message thereafter it increased rapidly to 10ms per message when there were about 1000 Java processes.
 
-![see image](https://github.com/msdeep14/How-Smartly-Erlang-Uses-Distributed-Computing/blob/master/images/message_passing_time.png)
+![see image](https://github.com/msdeep14/How-Smartly-Erlang-Uses-Distributed-Computing/blob/master/images/message_passing_time.png){:class="img-responsive"}
+
+{% include 2017-6-13-diff-os-erlang-process.html %}
 
 #### *Remember that both are different programming paradigms and both have their roles to play.
