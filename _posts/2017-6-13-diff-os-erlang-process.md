@@ -3,6 +3,7 @@ layout: post
 title: Erlang processes vs OS threads
 ---
 
+
 You always studied that OS threads are very light weight as compared to processes, I'm here to introduce to processes of **Erlang** which are even lighter than OS threads.
 
 Before you develop any misconceptions, understand this **These both are different paradigms**
@@ -19,7 +20,7 @@ The minimum memory allocated for a OS process is 64K, which is very large for a 
 
 From [here](http://www.infoq.com/presentations/erlang-software-for-a-concurrent-world)
 
-[Erlang] is a concurrent language – by that I mean that threads are part of the programming language, they do not belong to the operating system. That's really what's wrong with programming languages like Java and C++. It's threads aren't in the programming language, threads are something in the operating system – and they inherit all the problems that they have in the operating system. One of the problems is granularity of the memory management system. The memory management in the operating system protects whole pages of memory, so the smallest size that a thread can be is the smallest size of a page. That's actually too big. If you add more memory to your machine – you have the same number of bits that protects the memory so the granularity of the page tables goes up – you end up using say 64kB for a process you know running in a few hundred bytes.
+Erlang is a concurrent language – by that I mean that threads are part of the programming language, they do not belong to the operating system. That's really what's wrong with programming languages like Java and C++. It's threads aren't in the programming language, threads are something in the operating system – and they inherit all the problems that they have in the operating system. One of the problems is granularity of the memory management system. The memory management in the operating system protects whole pages of memory, so the smallest size that a thread can be is the smallest size of a page. That's actually too big. If you add more memory to your machine – you have the same number of bits that protects the memory so the granularity of the page tables goes up – you end up using say 64kB for a process you know running in a few hundred bytes.
 
 #### 3. Context switching
 
@@ -52,4 +53,4 @@ From [here](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&re
 
 
 
-#### *Remember that both are different programming paradigms and both have their roles to play.
+**NOTE** that both are different programming paradigms and both have their roles to play.
