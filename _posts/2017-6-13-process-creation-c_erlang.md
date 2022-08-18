@@ -5,7 +5,7 @@ title: Process creation in C vs Erlang
 
 Process is the running instance of program, so to execute any program we need to create a process, there are various defined procedures depending on language for creation of process.
 
-For example in **C**, we use `fork` and `spawn` in Erlang.
+For example in **[C](https://www.scaler.com/topics/c/)**, we use `fork` and `spawn` in Erlang.
 If you are a computer science student, you might have come across the term `fork` in your operating systems course, as far as **Erlang** is concerned you might not have heard about it.
 
 Before I go to the process creation in both the languages, I will encourage you to read something about Erlang on internet.
