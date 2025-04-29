@@ -1,0 +1,8 @@
+# OS generated files #
+######################
+.DS_Store
+
+# build files
+.idea/
+.sass-cache/
+_site/
