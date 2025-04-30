@@ -1,0 +1,182 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        .tab { margin-left: 40px; }
+    </style>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+    <style>
+        .system-design-section {
+          max-width: 1200px;
+          margin: 60px auto;
+          padding: 0 20px;
+          font-family: Arial, sans-serif;
+        }
+
+        .system-design-section h1 {
+          text-align: center;
+          font-size: 40px;
+          margin-bottom: 40px;
+        }
+
+        .system-design-containers {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          justify-content: center;
+        }
+
+        .system-box {
+          background: #f9f9f9;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+          padding: 24px;
+          flex: 1 1 450px;
+          min-width: 300px;
+          text-align: center;
+        }
+
+        .system-box h2 {
+          font-size: 24px;
+          margin-bottom: 16px;
+        }
+
+        .system-box a {
+          display: inline-block;
+          margin-top: 12px;
+          padding: 10px 20px;
+          background-color: #0052cc;
+          color: white;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: bold;
+          transition: background 0.3s;
+        }
+
+        .system-box a:hover {
+          background-color: #003d99;
+        }
+
+        .playlist-embed {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          border-radius: 8px;
+          margin-top: 10px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+    <style>
+        .system-box .youtube-actions {
+          margin-top: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .system-box .subscribe-btn {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #cc0000;
+          color: white;
+          text-decoration: none;
+          border-radius: 6px;
+          font-weight: bold;
+          font-size: 16px;
+          transition: background 0.3s;
+        }
+
+        .system-box .subscribe-btn:hover {
+          background-color: #a80000;
+        }
+
+        .system-box ..yt-subscribe-count {
+          background: transparent;
+          padding: 0;
+          border: none;
+          box-shadow: none;
+          display: flex;
+          justify-content: center;
+        }
+
+        .system-box .yt-subscribe-count iframe {
+          border: none;
+          height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="system-design-section" id="system-design">
+    <h1>System Design Resources</h1>
+    <div class="system-design-containers">
+
+        <!-- Book Box -->
+        <div class="system-box">
+            <h2>📘 System Design on AWS - O'Reilly Book</h2>
+            <p>The ultimate 600+ pages guide to designing, implementing, understanding, building, and scaling complex systems on AWS.</p>
+            <a href="/books">Read the Book</a>
+        </div>
+
+        <!-- YouTube Playlists Box -->
+        <div class="system-box">
+            <h2>🎥 System Design Videos</h2>
+            <p>Watch deep-dive explanations, whiteboard sessions, and interview tips.</p>
+
+            <div class="youtube-actions">
+                <a href="https://www.youtube.com/channel/UC5GDb4oVOCxUESy0dZOieIw?sub_confirmation=1" target="_blank" class="subscribe-btn">
+                    🔔 Subscribe - @MsDeepSingh
+                </a>
+
+                <div class="yt-subscribe-count">
+                    <iframe
+                            src="https://www.youtube.com/subscribe_embed?channelid=UC5GDb4oVOCxUESy0dZOieIw&layout=default&count=default"
+                            style="border: none; overflow: hidden; height: 30px; width: 150px;"
+                            allowtransparency="true"
+                            scrolling="no"
+                            frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: left">
+                <h4>📂 Playlist: Large Scale Architectures</h4>
+                <p>Companies shares their learnings and innovations via their engineering blogs. This playlist consists of analysis of such blogs from companies like Netflix, Uber, Discord, Amazon, and much more.</p>
+                <iframe class="playlist-embed" src="https://www.youtube.com/embed/videoseries?list=PLGPe9uvn5fMZaU6Sr3B-cl-BVumTOw98o" allowfullscreen></iframe>
+            </div>
+
+            <div style="margin-top: 30px; text-align: left">
+                <h4>📂 Playlist: Designing Data Intensive Applications Book Review</h4>
+                <p>Designing Data Intensive Application book summary.</p>
+                <iframe class="playlist-embed" src="https://www.youtube.com/embed/videoseries?list=PLGPe9uvn5fMZ1__Z6yrvcMqiyo5SEeSqP" allowfullscreen></iframe>
+            </div>
+
+            <div style="margin-top: 30px; text-align: left">
+                <h4>📂 Playlist: System Design - Launch Systems @Scale</h4>
+                <p>
+                    This series of videos will help you to grasp system design concepts starting from basic to designing advanced real time systems.
+                <ol>
+                <li>System Design Concepts.</li>
+                <li>Design Large scale Systems.</li>
+                <li>Architecture of real time systems.</li>
+                <li>Designing Data-Intensive Applications book summary.</li>
+                <li>Deep dive into Outages.</li>
+            </ol>
+                    </p>
+                <iframe class="playlist-embed" src="https://www.youtube.com/embed/videoseries?list=PLGPe9uvn5fMZ1mA6jPbOnRQj8-45zGJfn" allowfullscreen></iframe>
+            </div>
+
+            <div style="margin-top: 30px; text-align: left">
+                <h4>📂 Playlist: The Mystery of Time</h4>
+                <p>Behaviour of time in distributed systems.</p>
+                <iframe class="playlist-embed" src="https://www.youtube.com/embed/videoseries?list=PLGPe9uvn5fMY_DZyjHPH-Hc2Rpq3FJzku" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
