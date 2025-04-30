@@ -3,28 +3,79 @@
     <style type="text/css">
      .tab { margin-left: 40px; }
      </style>
+
+    <style>
+        .about-me-section {
+          max-width: 960px;
+          margin: 60px auto;
+          padding: 0 20px;
+          font-family: Arial, sans-serif;
+        }
+
+        .about-me-section h1 {
+          font-size: 32px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .about-me-section p {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #333;
+          text-align: left;
+          max-width: 800px;
+          margin: 0 auto 10px auto;
+        }
+
+        .about-links {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-top: 20px;
+        }
+
+        .about-links a {
+          text-decoration: none;
+          background-color: #0052cc;
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 6px;
+          font-weight: bold;
+          transition: background 0.3s;
+        }
+
+        .about-links a:hover {
+          background-color: #003d99;
+        }
+
+        .about-links a.youtube {
+          background-color: #ff0000;
+        }
+
+        .about-links a.youtube:hover {
+          background-color: #cc0000;
+        }
+    </style>
      <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 
 <body>
 
+<div class="about-me-section">
+    <h1>👋 About Me</h1>
+    <p>Hi there, I'm Mandeep Singh Shekhawat. </p>
     <p>
-
-        I'm passionate about Distributed Systems and always excited to work on challenging problems. I love to explore and deep dive into large scale system architectures and think of optimizations to make them better.
-
-        <br/><br/>
-        I'm Software Engineer by profession and spend my free time in reading and creating content to help around.
-    <ol>
-        <li> <a href="https://www.youtube.com/c/MsDeepSingh">YouTube channel - @MsDeepSingh </a></li>
-        <li> <a href="https://oreillymedia.pxf.io/c/5915786/2322629/15173"> O'Reilly Book - System Design on AWS </a></li>
-
-    </ol>
-        I'm a dynamic person interested in meeting new opportunities and positive people. Thanks for visiting my profile, I hope our paths cross in the future :)
-
-        <br/><br/>
-    <b>Disclaimer:</b> Opinions are my own and not any company/organization.
-
-<br/>
+        I'm passionate about building simple, scalable systems. I love to explore and deep dive into large scale system architectures and think of optimizations to make them better.
     </p>
+    <p>
+        I'm a Software Engineer, author and educator. While away from computer screen, I enjoy morning runs, weight lifting, cooking, and spending time with my family.
+    </p>
+
+    <div class="about-links">
+        <a href="/books" target="_self">📘 Read the Book</a>
+        <a href="https://www.youtube.com/@MsDeepSingh" target="_blank" class="youtube">▶️ Watch on YouTube</a>
+    </div>
+</div>
 
 </body>
