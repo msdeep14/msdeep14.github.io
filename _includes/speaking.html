@@ -1,0 +1,358 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAS Talks & Podcasts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: #f5f7fb;
+          margin: 0;
+          padding: 0;
+          color: #333;
+        }
+
+        .talks-wrapper {
+          max-width: 1200px;
+          margin: 60px auto;
+          padding: 0 20px;
+        }
+
+        h1.section-title {
+          font-size: 38px;
+          text-align: center;
+          color: #003d99;
+          margin-bottom: 40px;
+        }
+
+        /* --- Year Titles --- */
+        h2.year-title {
+          font-size: 26px;
+          color: #0052cc;
+          margin: 30px 0 15px;
+          border-left: 4px solid #0052cc;
+          padding-left: 10px;
+          cursor: pointer;
+          user-select: none;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        h2.year-title i {
+          transition: transform 0.3s ease;
+        }
+
+        h2.year-title.collapsed i {
+          transform: rotate(-90deg);
+        }
+
+        .year-content {
+          display: none;
+          flex-direction: column;
+          gap: 24px;
+          padding-left: 10px;
+          overflow: hidden;
+        }
+
+        .year-content.active {
+          display: flex;
+        }
+
+        /* --- Talk Card Layout --- */
+        .video-card {
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          padding: 16px;
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          align-items: flex-start;
+        }
+
+        .media-wrapper {
+          flex: 0 0 40%;
+          max-width: 400px;
+          aspect-ratio: 16 / 9;
+          border-radius: 8px;
+          overflow: hidden;
+          background: #000;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .media-wrapper iframe,
+        .media-wrapper img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border: none;
+        }
+
+        /* --- Preview Overlay for restricted embeds --- */
+        .media-wrapper .watch-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 40%;
+          background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          padding: 12px;
+        }
+
+        .media-wrapper .watch-overlay a {
+          background: rgba(255, 0, 0, 0.8);
+          color: #fff;
+          padding: 8px 14px;
+          border-radius: 6px;
+          font-weight: bold;
+          text-decoration: none;
+          font-size: 14px;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          transition: background 0.3s;
+        }
+
+        .media-wrapper .watch-overlay a:hover {
+          background: rgba(255, 0, 0, 1);
+        }
+
+        /* --- Text info --- */
+        .video-info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .video-info h3 {
+          color: #0052cc;
+          margin: 0 0 8px 0;
+          font-size: 18px;
+        }
+
+        .meta-info {
+          font-size: 14px;
+          font-weight: bold;
+          color: #555;
+          margin-bottom: 8px;
+        }
+
+        .video-info p {
+          font-size: 14px;
+          color: #444;
+          line-height: 1.5;
+        }
+
+        .video-card a.download-link {
+          align-self: flex-start;
+          margin-top: 10px;
+          background: #0052cc;
+          color: #fff;
+          padding: 8px 14px;
+          border-radius: 6px;
+          font-size: 14px;
+          text-decoration: none;
+          transition: background 0.3s;
+        }
+
+        .video-card a.download-link:hover {
+          background: #003d99;
+        }
+
+        hr {
+          margin: 60px 0;
+          border: none;
+          height: 2px;
+          background: #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+          .video-card {
+            flex-direction: column;
+          }
+          .media-wrapper {
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<div class="talks-wrapper">
+
+    <!-- 🎤 Conference Talks -->
+    <h1 class="section-title">Conference Talks</h1>
+
+    <!-- 2025 -->
+    <h2 class="year-title" data-year="2025">2025 <i class="fa fa-chevron-down"></i></h2>
+    <div class="year-content" id="year-2025">
+
+        <div class="video-card">
+            <div class="media-wrapper" data-type="image" data-img="{{ site.baseurl }}/images/conferences/gsas_2025_1.jpeg"></div>
+            <div class="video-info">
+                <h3>The Art of Designing Simple, Scalable Systems</h3>
+                <div class="meta-info">Conference: Global Software Architecture Summit, Barcelona, 2025</div>
+                <p>
+                    Simplicity is often lost in pursuit of system scalability.
+                    Figuring out simple solutions for a complex problem is an art.
+                    Simple solutions scale well with time and improves developer velocity, system reliability and reduce overall operational burden and cost.
+                </p>
+                <a href="https://drive.google.com/file/d/1e6Q2feazuv4jQ9aY4Qho9TAsCNKddl-W/view?usp=drive_link" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="media-wrapper" data-type="embed" data-id="O4xojdsQRp0" data-start="3625"></div>
+            <div class="video-info">
+                <h3>Making DynamoDB Work For You : The Production Patterns & Pitfalls Playbook</h3>
+                <div class="meta-info">Conference: AWS Student Community Day, Chennai, 2025</div>
+                <p>
+                    Does DynamoDB feel like a black box, leaving you struggling with rising costs, unexpected performance issues, or difficult design choices?
+                    This session tackles the real challenges teams face in running DynamoDB at production scale.
+                    Through real-world examples and lessons learned,
+                    you’ll discover how to build resilient systems, optimise performance, keep costs in check, and confidently troubleshoot issues,
+                    ensuring DynamoDB truly works for you in production at scale.
+                </p>
+                <a href="https://docs.google.com/presentation/d/1qo0GzSfQHefbZKAkrVrbUid5YcDnuqmrqBMlZZS_NTs/edit?usp=drive_link" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="media-wrapper" data-type="image" data-img="{{ site.baseurl }}/images/conferences/aws_user_group_barcelona_1.jpg"></div>
+            <div class="video-info">
+                <h3>Building Systems on AWS : The Right Way</h3>
+                <div class="meta-info">Conference: AWS User Group MeetUp, Barcelona, 2025</div>
+                <p>
+                    Discover patterns and pitfalls from real-world production deployments that help architects and developers
+                    make informed decisions from day one. We'll explore some practical examples,
+                    emphasizing when to choose managed services over custom solutions,
+                    how to optimize for cost and performance.
+                    Whether you're empowering junior builders on your team or refining your own architecture,
+                    you'll leave with actionable frameworks to build systems that scale effortlessly and adapt to growth.
+                </p>
+                <a href="https://docs.google.com/presentation/d/1HKWvObsKqtyEpL7aWwN2vZRmLjdcoOQTikVM1clAmSE/edit?usp=drive_link" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="media-wrapper" data-type="embed" data-id="8t0PxQEI7XQ"></div>
+            <div class="video-info">
+                <h3>System Design Essentials</h3>
+                <div class="meta-info">Training: National Institute of Engineering, IEEE Division, Mysore, Online, 2025</div>
+                <p>Understand building systems from the system design fundaments to designing a bookings platform.</p>
+                <a href="https://docs.google.com/presentation/d/1C0zB16cTc6MwTMx5SL9DpnJYMGNX2Q8RBOLZ53sryPg/edit?usp=drive_link" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="media-wrapper" data-type="preview" data-id="InSdt44os3E" data-start="3278"></div>
+            <div class="video-info">
+                <h3>From Idea to Bookshelf : Writing a Technical Book with O'Reilly</h3>
+                <div class="meta-info">Conference: AWS Global Community Gatherings #7, Online, 2025</div>
+                <p>Starting from the motivation to outlining the entire process of writing a technical book with O'Reilly.</p>
+                <a href="https://docs.google.com/presentation/d/12NwBh6lRB2WITwP2LsIwQc4byMUtHobZU5AWGWYZFgo/edit?usp=drive_link" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
+            </div>
+        </div>
+
+    </div>
+
+    <hr />
+
+    <!-- 🎧 Podcasts -->
+    <h1 class="section-title">Podcasts</h1>
+
+    <!-- 2025 -->
+    <h2 class="year-title" data-year="podcast-2025">2025 <i class="fa fa-chevron-down"></i></h2>
+    <div class="year-content" id="year-podcast-2025">
+        <div class="video-card">
+            <div class="media-wrapper" data-type="embed" data-id="s7_4lHe2ZXs"></div>
+            <div class="video-info">
+                <h3>How to approach SYSTEM DESIGN PROBLEMS 2025</h3>
+                <div class="meta-info">Podcast with: Love Babbar</div>
+                <p>
+                    A discussion about System Design, how one should approach a design problem and factors impacting any system design.
+                </p>
+            </div>
+        </div>
+
+        <div class="video-card">
+            <div class="media-wrapper" data-type="embed" data-id="W6cagAT3FxA"></div>
+            <div class="video-info">
+                <h3>System Design on AWS with O’Reilly Author Mandeep Singh | Real-World Cloud Architecture Tips</h3>
+                <div class="meta-info">Podcast with: Tech With Yeshwanth</div>
+                <p>
+                    A discussion about System Design and building systems on AWS Cloud.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    // --- Generate media content (embed / preview / image) ---
+    document.querySelectorAll('.media-wrapper').forEach(wrapper => {
+      const type = wrapper.dataset.type;
+      const id = wrapper.dataset.id;
+      const start = wrapper.dataset.start || 0;
+      const img = wrapper.dataset.img;
+
+      if (type === 'embed' && id) {
+        wrapper.innerHTML = `
+          <iframe
+            src="https://www.youtube.com/embed/${id}?start=${start}"
+            allowfullscreen
+            style="width:100%;height:100%;border:none;"
+          ></iframe>
+        `;
+      } else if (type === 'preview' && id) {
+        const youtubeLink = `https://www.youtube.com/watch?v=${id}&t=${start}s`;
+        wrapper.innerHTML = `
+          <img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="Video Preview">
+          <div class="watch-overlay">
+            <a href="${youtubeLink}" target="_blank">
+              <i class="fa fa-youtube-play"></i> Watch on YouTube
+            </a>
+          </div>
+        `;
+      } else if (type === 'image' && img) {
+        wrapper.innerHTML = `<img src="${img}" alt="Session Image">`;
+      }
+    });
+
+    // --- Expand/Collapse Year Sections ---
+    document.querySelectorAll('.year-title').forEach(title => {
+      const yearId = title.dataset.year;
+      const content = document.getElementById(`year-${yearId}`);
+
+      // open 2025 years by default
+      if (yearId.includes("2025")) {
+        content.classList.add("active");
+      }
+
+      title.addEventListener('click', () => {
+        content.classList.toggle('active');
+        title.classList.toggle('collapsed');
+        const icon = title.querySelector('i');
+        if (content.classList.contains('active')) {
+          icon.classList.replace('fa-chevron-right', 'fa-chevron-down');
+        } else {
+          icon.classList.replace('fa-chevron-down', 'fa-chevron-right');
+        }
+      });
+    });
+</script>
+</body>
+</html>
