@@ -186,6 +186,34 @@
             max-width: 100%;
           }
         }
+
+        /* --- Collapsible Description --- */
+        .description {
+          position: relative;
+          font-size: 14px;
+        }
+
+        .description.collapsed {
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .show-more-btn {
+          margin-top: 8px;
+          background: none;
+          border: none;
+          color: #0052cc;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: bold;
+          padding: 0;
+        }
+
+        .show-more-btn:hover {
+          text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -199,11 +227,11 @@
     <div class="year-content" id="year-2026">
 
         <div class="video-card">
-            <div class="media-wrapper" data-type="image" data-img="{{ site.baseurl }}/images/conferences/gids_2026_2.png"></div>
+            <div class="media-wrapper" data-type="embed" data-id="XqdKVAB_EZU"></div>
             <div class="video-info">
                 <h3>A Tale of Two Systems: Design and Reality</h3>
                 <div class="meta-info">Conference: Great International Developer Summit, Bengaluru, India 2026</div>
-                <p>
+                <div class="description collapsed">
                     Every architect knows the feeling: the system you designed and the one that was actually built rarely look the same.
                     In fast-moving environments, where speed often trumps structure, clean architecture can quickly give way to quick fixes and temporary solutions.
                     The rise of AI has only accelerated this tension: new models and features appear weekly, and startups rush to deploy them first.
@@ -214,17 +242,18 @@
                     Drawing from real-world experiences, it highlights strategies for balancing deliberate design with rapid iteration,
                     understanding when to plan deeply and when to adapt.
                     Attendees will gain practical insight into designing systems that evolve gracefully under constant change, building for today without blocking tomorrow.
-                </p>
+                </div>
+                <button class="show-more-btn">Show More</button>
                 <a href="https://drive.google.com/file/d/1y0iI5LGJKTZKqMR_sUJ938VGHSKXeqxN/view?usp=sharing" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
             </div>
         </div>
 
         <div class="video-card">
-            <div class="media-wrapper" data-type="image" data-img="{{ site.baseurl }}/images/conferences/gids_2026_1.png"></div>
+            <div class="media-wrapper" data-type="embed" data-id="GrChh3APt5Y"></div>
             <div class="video-info">
                 <h3>The Architect’s Dilemma: Control vs Convenience</h3>
                 <div class="meta-info">Conference: Great International Developer Summit, Bengaluru, India 2026</div>
-                <p>
+                <div class="description collapsed">
                     Few decisions challenge software architects more than choosing between control and convenience.
                     Should you host PostgreSQL on EC2 for full control, use Amazon RDS for managed simplicity, or
                     opt for Aurora DSQL for serverless scalability? Each path involves trade-offs around cost, speed, expertise, and risk.
@@ -234,7 +263,8 @@
                     balance short-term delivery with long-term flexibility, and assess the true total cost of ownership beyond cloud provider bills.
                     The session also discusses how to align technology choices with team skills, compliance requirements, and business priorities.
                     Ultimately, it encourages architects to focus on delivering value rather than pursuing complexity for its own sake.
-                </p>
+                </div>
+                <button class="show-more-btn">Show More</button>
                 <a href="https://drive.google.com/file/d/1nKeIsJX15YQG5O9QXXxlDz46JG6_t0Ym/view?usp=sharing" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
             </div>
         </div>
@@ -250,11 +280,12 @@
             <div class="video-info">
                 <h3>The Art of Designing Simple, Scalable Systems</h3>
                 <div class="meta-info">Conference: Global Software Architecture Summit, Barcelona, 2025</div>
-                <p>
+                <div class="description collapsed">
                     Simplicity is often lost in pursuit of system scalability.
                     Figuring out simple solutions for a complex problem is an art.
                     Simple solutions scale well with time and improves developer velocity, system reliability and reduce overall operational burden and cost.
-                </p>
+                </div>
+                <button class="show-more-btn">Show More</button>
                 <a href="https://drive.google.com/file/d/1e6Q2feazuv4jQ9aY4Qho9TAsCNKddl-W/view?usp=drive_link" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
             </div>
         </div>
@@ -264,13 +295,14 @@
             <div class="video-info">
                 <h3>Making DynamoDB Work For You : The Production Patterns & Pitfalls Playbook</h3>
                 <div class="meta-info">Conference: AWS Student Community Day, Chennai, 2025</div>
-                <p>
+                <div class="description collapsed">
                     Does DynamoDB feel like a black box, leaving you struggling with rising costs, unexpected performance issues, or difficult design choices?
                     This session tackles the real challenges teams face in running DynamoDB at production scale.
                     Through real-world examples and lessons learned,
                     you’ll discover how to build resilient systems, optimise performance, keep costs in check, and confidently troubleshoot issues,
                     ensuring DynamoDB truly works for you in production at scale.
-                </p>
+                </div>
+                <button class="show-more-btn">Show More</button>
                 <a href="https://docs.google.com/presentation/d/1qo0GzSfQHefbZKAkrVrbUid5YcDnuqmrqBMlZZS_NTs/edit?usp=drive_link" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
             </div>
         </div>
@@ -280,12 +312,13 @@
             <div class="video-info">
                 <h3>Building Systems on AWS : The Right Way</h3>
                 <div class="meta-info">Conference: AWS User Group MeetUp, Barcelona, 2025</div>
-                <p>
+                <div class="description collapsed">
                     Discover patterns and pitfalls from real-world production deployments that help architects and developers
                     make informed decisions from day one. We'll explore some practical examples,
                     emphasizing when to choose managed services over custom solutions,
                     how to optimize for cost and performance.
-                </p>
+                </div>
+                <button class="show-more-btn">Show More</button>
                 <a href="https://docs.google.com/presentation/d/1HKWvObsKqtyEpL7aWwN2vZRmLjdcoOQTikVM1clAmSE/edit?usp=drive_link" class="download-link" download><i class="fa fa-download"></i> Download Slides</a>
             </div>
         </div>
@@ -395,6 +428,21 @@
           icon.classList.replace('fa-chevron-right', 'fa-chevron-down');
         } else {
           icon.classList.replace('fa-chevron-down', 'fa-chevron-right');
+        }
+      });
+    });
+
+    // --- Show More / Show Less ---
+    document.querySelectorAll('.show-more-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const description = button.previousElementSibling;
+
+        description.classList.toggle('collapsed');
+
+        if (description.classList.contains('collapsed')) {
+          button.textContent = 'Show More';
+        } else {
+          button.textContent = 'Show Less';
         }
       });
     });
