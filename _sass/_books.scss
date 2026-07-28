@@ -16,7 +16,7 @@
 
 .book-cover {
   flex: 0 0 350px;
-  
+
   img {
     width: 100%;
     border-radius: 12px;
@@ -60,26 +60,48 @@
     box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
     border: none;
-    
+
     &:hover {
       transform: translateY(-2px);
       box-shadow: var(--card-shadow-hover);
     }
 
-    &.amazon-com { background-color: #f90; color: #111 !important; }
-    &.amazon-in { background-color: #ff9900; color: #111 !important; }
-    &.oreilly { background-color: #e52d27; }
-    &.shroff { background-color: #0f766e; }
-    &.dragonfly { background-color: #6366f1; }
+    &.amazon-com {
+      background-color: #f90;
+      color: #111 !important;
+    }
+
+    &.amazon-in {
+      background-color: #ff9900;
+      color: #111 !important;
+    }
+
+    &.oreilly {
+      background-color: #e52d27;
+    }
+
+    &.shroff {
+      background-color: #0f766e;
+    }
   }
 }
 
-.audience-section, .inside-section, .foreword-section, .trusted-section, .experts-section, .authors-section, .wall-section, .giveaway-gallery-container, .videos-section, .language-section {
+.audience-section,
+.inside-section,
+.foreword-section,
+.trusted-section,
+.experts-section,
+.authors-section,
+.wall-section,
+.giveaway-gallery-container,
+.videos-section,
+.language-section {
   max-width: 1000px;
   margin: 80px auto;
   padding: 0 20px;
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 40px;
@@ -99,7 +121,7 @@
     line-height: 1.6;
     color: var(--text-muted);
     margin-bottom: 30px;
-    
+
     li {
       margin-bottom: 15px;
     }
@@ -119,10 +141,12 @@
   &::-webkit-scrollbar {
     height: 8px;
   }
+
   &::-webkit-scrollbar-track {
     background: var(--bg-secondary);
     border-radius: 4px;
   }
+
   &::-webkit-scrollbar-thumb {
     background: var(--border-color);
     border-radius: 4px;
@@ -130,7 +154,8 @@
 }
 
 .expert-card {
-  flex: 0 0 380px; /* Fixed width for cards in carousel */
+  flex: 0 0 380px;
+  /* Fixed width for cards in carousel */
   scroll-snap-align: start;
   background-color: var(--card-bg);
   padding: 30px;
@@ -147,13 +172,13 @@
     color: var(--text-muted);
     font-style: italic;
     margin-bottom: 25px;
-    
+
     /* Truncation styles */
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    
+
     &.expanded {
       -webkit-line-clamp: unset;
       display: block;
@@ -173,7 +198,7 @@
     text-align: left;
     display: inline-block;
     width: fit-content;
-    
+
     &:hover {
       text-decoration: underline;
     }
@@ -263,7 +288,7 @@
   box-shadow: var(--card-shadow);
   border: 1px solid var(--border-color);
   margin-bottom: 30px;
-  
+
   iframe {
     width: 100%;
     height: 100%;
@@ -283,8 +308,10 @@
     color: var(--text-muted);
     line-height: 1.6;
     margin-top: 15px;
-    
-    li { margin-bottom: 10px; }
+
+    li {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -306,7 +333,7 @@
   align-items: center;
   gap: 20px;
   justify-content: center;
-  
+
   img {
     width: 60px;
     height: 60px;
@@ -335,8 +362,13 @@
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-200px * 10)); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-200px * 10));
+  }
 }
 
 .logo-item {
@@ -345,13 +377,13 @@
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  
+
   img {
     max-width: 100%;
     max-height: 60px;
     filter: grayscale(100%) opacity(60%);
     transition: all 0.3s ease;
-    
+
     &:hover {
       filter: grayscale(0) opacity(100%);
     }
@@ -360,18 +392,21 @@
 
 [data-theme="dark"] .logo-item img {
   filter: invert(1) opacity(60%);
-  &:hover { filter: invert(1) opacity(100%); }
+
+  &:hover {
+    filter: invert(1) opacity(100%);
+  }
 }
 
 .wall-grid {
   column-count: 3;
   column-gap: 20px;
   padding-bottom: 20px;
-  
+
   @media (max-width: 900px) {
     column-count: 2;
   }
-  
+
   @media (max-width: 600px) {
     column-count: 1;
   }
@@ -380,7 +415,7 @@
 .wall-item {
   break-inside: avoid;
   margin-bottom: 20px;
-  
+
   img {
     width: 100%;
     height: auto;
@@ -390,7 +425,7 @@
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block; // Prevents bottom gap
-    
+
     &:hover {
       transform: translateY(-4px);
       box-shadow: var(--card-shadow-hover);
@@ -405,15 +440,17 @@
   padding-bottom: 20px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  
+
   /* Modern scrollbar */
   &::-webkit-scrollbar {
     height: 8px;
   }
+
   &::-webkit-scrollbar-track {
     background: var(--bg-secondary);
     border-radius: 4px;
   }
+
   &::-webkit-scrollbar-thumb {
     background: var(--border-color);
     border-radius: 4px;
@@ -427,7 +464,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--card-shadow);
-  
+
   iframe {
     width: 100%;
     height: 100%;
@@ -439,7 +476,7 @@
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
-  
+
   a {
     background-color: var(--card-bg);
     color: var(--text-color);
@@ -449,7 +486,7 @@
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    
+
     &:hover {
       background-color: var(--bg-secondary);
       border-color: var(--accent-color);
@@ -482,7 +519,7 @@
   align-items: center;
   background-color: transparent; // Let the background show through
   padding: 10px;
-  
+
   img {
     height: 450px;
     width: 100%;
@@ -496,7 +533,8 @@
   }
 }
 
-.giveaway-prev, .giveaway-next {
+.giveaway-prev,
+.giveaway-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -512,14 +550,19 @@
   align-items: center;
   justify-content: center;
   box-shadow: var(--card-shadow);
-  
+
   &:hover {
     background-color: var(--bg-secondary);
   }
 }
 
-.giveaway-prev { left: 20px; }
-.giveaway-next { right: 20px; }
+.giveaway-prev {
+  left: 20px;
+}
+
+.giveaway-next {
+  right: 20px;
+}
 
 /* Book Hub Styles */
 .book-hub-section {
@@ -589,9 +632,17 @@
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .hub-card-image {
@@ -604,13 +655,13 @@
   background-color: var(--bg-secondary);
   padding: 20px;
   box-sizing: border-box;
-  
+
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     transition: transform 0.5s ease;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
   }
 
   &.placeholder-cover {

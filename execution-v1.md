@@ -55,3 +55,10 @@ The primary goal was to bring a modern, tech-focused aesthetic (a "wow" factor) 
   - Updated Guest Articles cards to represent the publications as a whole (e.g. System Design One Newsletter) to naturally scale with future writings.
   - Created a new `projects/system_design_one_articles.html` page to list the newsletter articles (similar to the GeeksforGeeks page) since the newsletter is managed externally.
   - Updated the card icon for the newsletter to an envelope (`fa-envelope-o`).
+
+## Books Tab Adjustments
+- **Analysis:** The user requested to remove the "2 Free Chapters" link (Dragonfly DB) from the "System Design on AWS" book page as the URL is dead, and replace it with a Google Books link. Additionally, an O'Reilly shortlink with affiliate parameters was triggering their WAF firewall.
+- **Actions Taken:**
+  - Replaced the affiliate shortlink (`https://oreil.ly/ruQbc`) with the direct URL in `_includes/books.html` to fix the "Access Denied" error.
+  - Removed the Dragonfly `.dragonfly` button and added a new `.google-books` button with Google Blue branding in `_sass/_books.scss`.
+  - Linked the new Google Books button to the book's Google Books page via its ISBN (`https://books.google.com/books?vid=ISBN9781098146887`).
