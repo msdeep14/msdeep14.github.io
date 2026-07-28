@@ -1,0 +1,332 @@
+// _sass/_speaking.scss
+
+/* --- Tabs Navigation --- */
+.speaking-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px auto 20px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.tab-btn {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+  &:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+  }
+
+  &.active {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+  }
+}
+
+/* --- Section Containers --- */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease;
+
+  &.active {
+    display: block;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.talks-section,
+.podcasts-section,
+.articles-section {
+  padding: 40px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.podcasts-section {
+  background-color: transparent; /* Removed background since it's a tab now */
+  max-width: 1200px;
+  padding: 40px 20px 60px;
+}
+
+.section-title {
+  font-size: 32px;
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+/* --- Year Titles --- */
+.year-title {
+  font-size: 26px;
+  color: var(--accent-color);
+  margin: 40px 0 20px;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 15px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--accent-hover);
+  }
+
+  i {
+    transition: transform 0.3s ease;
+    font-size: 20px;
+  }
+
+  &.collapsed i {
+    transform: rotate(-90deg);
+  }
+}
+
+.year-content {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 10px;
+  overflow: hidden;
+
+  &.active {
+    display: flex;
+  }
+}
+
+/* --- Grids --- */
+.talks-grid, .articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* --- Talk Card Layout --- */
+.video-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+  height: 100%;
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+  }
+}
+
+.media-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  iframe, img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+  }
+
+  /* --- Preview Overlay for restricted embeds --- */
+  .watch-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 12px;
+
+    a {
+      background-color: #e52d27;
+      color: #fff !important;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: #cc0000;
+      }
+    }
+  }
+}
+
+/* --- Text info --- */
+.video-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    color: var(--text-color);
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .meta-info {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 12px;
+  }
+
+  p, .description {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    flex-grow: 1;
+  }
+}
+
+.download-link {
+  align-self: flex-start;
+  margin-top: 15px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text) !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+
+  &:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+  }
+}
+
+/* --- Collapsible Description --- */
+.description {
+  position: relative;
+
+  &.collapsed {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+.show-more-btn {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+  display: inline-block;
+  align-self: flex-start;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--accent-hover);
+  }
+}
+
+/* --- Article Cards --- */
+.article-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+  text-align: center;
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+  }
+
+  .article-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    color: var(--accent-color);
+  }
+
+  h3 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+
+  .article-link-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    i {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover .article-link-text i {
+    transform: translateX(4px);
+  }
+}

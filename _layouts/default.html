@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
@@ -11,29 +11,39 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <!-- Theme Toggle Script -->
+    <script>
+      (function() {
+        // Set premium dark theme by default, but allow user override via localStorage
+        var theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
   </head>
 
   <body>
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" alt="Avatar"/></a>
 
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
+            <h1 class="site-name font-mono"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description text-muted font-mono" style="font-size: 14px;">> {{ site.description }}</p>
           </div>
 
           <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
+            <a href="https://systemdesignfromscratch.org/" target="_blank" rel="noopener noreferrer">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
             <a href="{{ site.baseurl }}/books">Books</a>
             <a href="{{ site.baseurl }}/speaking">Speaking</a>
             <a href="{{ site.baseurl }}/system_design">System Design</a>
             <a href="{{ site.baseurl }}/projects">Projects</a>
-            <!-- <a href="{{ site.baseurl }}/publications">Publications</a> -->
+            <a href="#" id="theme-toggle" class="theme-toggle" title="Toggle Theme" style="margin-left: 15px; cursor: pointer;">
+              <i class="fa fa-sun-o" id="theme-icon"></i>
+            </a>
           </nav>
         </header>
       </div>
@@ -52,5 +62,40 @@
     </div>
 
     {% include analytics.html %}
+
+    <!-- Theme Toggle Logic -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const root = document.documentElement;
+
+        // Initialize Icon
+        if(root.getAttribute('data-theme') === 'dark') {
+          themeIcon.classList.remove('fa-moon-o');
+          themeIcon.classList.add('fa-sun-o');
+        } else {
+          themeIcon.classList.remove('fa-sun-o');
+          themeIcon.classList.add('fa-moon-o');
+        }
+
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          let currentTheme = root.getAttribute('data-theme');
+          let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          
+          root.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+          
+          if(newTheme === 'dark') {
+            themeIcon.classList.remove('fa-moon-o');
+            themeIcon.classList.add('fa-sun-o');
+          } else {
+            themeIcon.classList.remove('fa-sun-o');
+            themeIcon.classList.add('fa-moon-o');
+          }
+        });
+      });
+    </script>
   </body>
 </html>

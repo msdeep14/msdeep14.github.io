@@ -1,0 +1,99 @@
+// _sass/_project_detail.scss
+.project-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    
+    i.fa-github {
+      margin-right: 10px;
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+}
+
+.btn-github {
+  display: inline-block;
+  background: linear-gradient(135deg, #333 0%, #111 100%);
+  color: #fff !important;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #444 0%, #222 100%);
+  }
+
+  i {
+    margin-right: 8px;
+  }
+}
+
+html[data-theme="light"] .btn-github {
+  background: linear-gradient(135deg, #24292e 0%, #000 100%);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  margin-bottom: 40px;
+
+  h3 {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+  }
+
+  h4 {
+    grid-column: 1 / -1;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    cursor: pointer;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      z-index: 10;
+      position: relative;
+    }
+  }
+}

@@ -1,219 +1,92 @@
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">
-        .tab { margin-left: 40px; }
-    </style>
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-
-    <style>
-        .system-design-section {
-          max-width: 1200px;
-          margin: 60px auto;
-          padding: 0 20px;
-          font-family: Arial, sans-serif;
-        }
-
-        .system-design-section h1 {
-          text-align: center;
-          font-size: 40px;
-          margin-bottom: 20px;
-        }
-
-        .system-design-containers {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 40px;
-          justify-content: center;
-        }
-
-        .system-box {
-          background: #f9f9f9;
-          border-radius: 12px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-          padding: 24px;
-          flex: 1 1 450px;
-          min-width: 300px;
-          text-align: center;
-        }
-
-        .system-box h2 {
-          font-size: 24px;
-          margin-bottom: 16px;
-        }
-
-        .system-box a {
-          display: inline-block;
-          margin-top: 12px;
-          padding: 10px 20px;
-          background-color: #0052cc;
-          color: white;
-          text-decoration: none;
-          border-radius: 6px;
-          font-weight: bold;
-          transition: background 0.3s;
-        }
-
-        .system-box a:hover {
-          background-color: #003d99;
-        }
-
-        .playlist-embed {
-          width: 100%;
-          aspect-ratio: 16 / 9;
-          border-radius: 8px;
-          margin-top: 10px;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-
-    <style>
-        .system-box .youtube-actions {
-          margin-top: 16px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 12px;
-        }
-
-        .system-box .subscribe-btn {
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: #cc0000;
-          color: white;
-          text-decoration: none;
-          border-radius: 6px;
-          font-weight: bold;
-          font-size: 16px;
-          transition: background 0.3s;
-        }
-
-        .system-box .subscribe-btn:hover {
-          background-color: #a80000;
-        }
-
-        .system-box ..yt-subscribe-count {
-          background: transparent;
-          padding: 0;
-          border: none;
-          box-shadow: none;
-          display: flex;
-          justify-content: center;
-        }
-
-        .system-box .yt-subscribe-count iframe {
-          border: none;
-          height: 25px;
-        }
-    </style>
-
-    <style>
-        .discord-section {
-          max-width: 1000px;
-          margin: 60px auto;
-          padding: 40px 20px;
-          background: #f5f5f5;
-          border-radius: 12px;
-          text-align: center;
-          font-family: Arial, sans-serif;
-        }
-
-        .discord-section h2 {
-          font-size: 32px;
-          margin-bottom: 16px;
-        }
-
-        .discord-section p {
-          font-size: 18px;
-          margin-bottom: 24px;
-          color: #444;
-        }
-
-        .discord-btn {
-          display: inline-block;
-          padding: 12px 24px;
-          background-color: #5865F2;
-          color: white;
-          font-weight: bold;
-          font-size: 16px;
-          border-radius: 8px;
-          text-decoration: none;
-          transition: background 0.3s ease;
-        }
-
-        .discord-btn:hover {
-          background-color: #4752c4;
-        }
-    </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 
 <body>
 
-<div class="system-design-section" id="system-design">
+  <section class="system-design-section" id="system-design">
     <h1>System Design Resources</h1>
-    <div class="system-design-containers">
 
-        <!-- Book Box -->
-        <div class="system-box">
-            <h2>📘 System Design on AWS - O'Reilly Book</h2>
-            <p>The ultimate 600+ pages guide to designing, implementing, understanding, building, and scaling complex systems on AWS.</p>
-            <a href="/books">Read the Book</a>
+    <div class="system-design-grid">
+
+      <!-- Book Box -->
+      <article class="system-box">
+        <h2><i class="fa fa-book" aria-hidden="true" style="color: #4183C4;"></i> System Design on AWS</h2>
+        <p>The ultimate 600+ pages guide to designing, implementing, understanding, building, and scaling complex
+          systems on AWS.</p>
+        <div>
+          <a href="https://amzn.to/4jExkte" target="_blank" class="btn-primary">Read the Book</a>
         </div>
+      </article>
 
-        <div class="discord-section" id="discord">
-            <h2>💬 Join the Discord Community</h2>
-            <p>Connect with fellow system design learners, ask questions, share resources, and grow together.</p>
-            <a href="https://discord.gg/J2geTUbpW6" target="_blank" class="discord-btn">
-                Join Now on Discord
-            </a>
+      <!-- Newsletter Box -->
+      <article class="system-box">
+        <h2><i class="fa fa-newspaper-o" aria-hidden="true" style="color: #4183C4;"></i> System Design Newsletter</h2>
+        <p>Deep dive into large scale system architectures, understand the concepts from the ground up.</p>
+        <div>
+          <a href="https://systemdesignfromscratch.org/" target="_blank" class="btn-primary">Read the Newsletter</a>
         </div>
-
-        <!-- YouTube Playlists Box -->
-        <div class="system-box">
-            <h2>🎥 System Design Videos</h2>
-            <p>Watch deep-dive explanations, whiteboard sessions, and interview tips.</p>
-
-            <div class="youtube-actions">
-                <a href="https://www.youtube.com/channel/UC5GDb4oVOCxUESy0dZOieIw?sub_confirmation=1" target="_blank" class="subscribe-btn">
-                    🔔 Subscribe - @MsDeepSingh
-                </a>
-
-                <div class="yt-subscribe-count">
-                    <iframe
-                            src="https://www.youtube.com/subscribe_embed?channelid=UC5GDb4oVOCxUESy0dZOieIw&layout=default&count=default"
-                            style="border: none; overflow: hidden; height: 30px; width: 150px;"
-                            allowtransparency="true"
-                            scrolling="no"
-                            frameborder="0">
-                    </iframe>
-                </div>
-            </div>
-
-            <div style="margin-top: 30px; text-align: left">
-                <h4>📂 Playlist: Designing Data Intensive Applications Book Review</h4>
-                <p>Designing Data Intensive Application book summary.</p>
-                <iframe class="playlist-embed" src="https://www.youtube.com/embed/videoseries?list=PLGPe9uvn5fMZ1__Z6yrvcMqiyo5SEeSqP" allowfullscreen></iframe>
-            </div>
-
-            <div style="margin-top: 30px; text-align: left">
-                <h4>📂 Playlist: System Design - Launch Systems @Scale</h4>
-                <p>
-                    This series of videos will help you to grasp system design concepts starting from basic to designing advanced real time systems.
-                <ol>
-                <li>System Design Concepts.</li>
-                <li>Design Large scale Systems.</li>
-                <li>Architecture of real time systems.</li>
-                <li>Designing Data-Intensive Applications book summary.</li>
-                <li>Deep dive into Outages.</li>
-            </ol>
-                    </p>
-                <iframe class="playlist-embed" src="https://www.youtube.com/embed/videoseries?list=PLGPe9uvn5fMZ1mA6jPbOnRQj8-45zGJfn" allowfullscreen></iframe>
-            </div>
-
-
-
-        </div>
+      </article>
 
     </div>
-</div>
+
+    <!-- Discord Community Section -->
+    <section class="discord-section" id="discord">
+      <h2><i class="fa fa-comments" aria-hidden="true" style="color: #5865F2;"></i> Join the Discord Community</h2>
+      <p>Connect with fellow system design learners, ask questions, share resources, and grow together in our active
+        community.</p>
+      <a href="https://discord.gg/J2geTUbpW6" target="_blank" class="btn-discord">
+        Join Now on Discord
+      </a>
+    </section>
+
+    <!-- YouTube Playlists Section -->
+    <section class="system-design-grid">
+      <article class="system-box" style="grid-column: 1 / -1;"> <!-- Spans full width -->
+        <h2><i class="fa fa-youtube-play" aria-hidden="true" style="color: #e52d27;"></i> System Design Videos</h2>
+        <p>Watch deep-dive explanations, whiteboard sessions, and interview tips on our dedicated YouTube channel.</p>
+
+        <div class="youtube-actions">
+          <a href="https://www.youtube.com/channel/UC5GDb4oVOCxUESy0dZOieIw?sub_confirmation=1" target="_blank"
+            class="btn-danger">
+            <i class="fa fa-bell" aria-hidden="true"></i> Subscribe - @MsDeepSingh
+          </a>
+
+          <div class="yt-subscribe-count">
+            <iframe
+              src="https://www.youtube.com/subscribe_embed?channelid=UC5GDb4oVOCxUESy0dZOieIw&layout=default&count=default"
+              allowtransparency="true" scrolling="no" frameborder="0">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Playlists Layout (2 Columns inside full width box on desktop) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+          <div class="playlist-container">
+            <h4><i class="fa fa-folder-open-o" aria-hidden="true"></i> Designing Data Intensive Applications</h4>
+            <p>Designing Data Intensive Application book summary.</p>
+            <iframe class="playlist-embed"
+              src="https://www.youtube.com/embed/videoseries?list=PLGPe9uvn5fMZ1__Z6yrvcMqiyo5SEeSqP"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="playlist-container">
+            <h4><i class="fa fa-folder-open-o" aria-hidden="true"></i> System Design - Launch Systems @Scale</h4>
+            <p>Grasp system design concepts starting from basic to advanced real time systems.</p>
+            <ol>
+              <li>System Design Concepts.</li>
+              <li>Design Large scale Systems.</li>
+            </ol>
+            <iframe class="playlist-embed"
+              src="https://www.youtube.com/embed/videoseries?list=PLGPe9uvn5fMZ1mA6jPbOnRQj8-45zGJfn"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </article>
+    </section>
+
+  </section>
 
 </body>

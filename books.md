@@ -3,4 +3,5 @@ layout: page
 permalink: /books/
 ---
 
-{% include books.html %}
+
+{% include books_hub.html %}

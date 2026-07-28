@@ -1,0 +1,206 @@
+/* 
+ * System Design Resources Page Styles 
+ * Modernized with CSS Grid, Micro-animations, and Design System Variables
+ */
+
+.system-design-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  font-family: var(--font-sans);
+  color: var(--text-muted);
+  
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    font-weight: 700;
+  }
+}
+
+// Grid Layout for Resources
+.system-design-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+// Reusable Card Style
+.system-box {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    flex-grow: 1; // Pushes button to bottom
+  }
+}
+
+// Action Buttons
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text) !important;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2); // Soft blue shadow
+
+  &:hover {
+    background-color: var(--accent-hover);
+    color: var(--btn-text) !important;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-danger {
+  @extend .btn-primary;
+  background-color: #e52d27;
+  box-shadow: 0 4px 10px rgba(229, 45, 39, 0.2);
+
+  &:hover {
+    background-color: darken(#e52d27, 10%);
+  }
+}
+
+.btn-discord {
+  @extend .btn-primary;
+  background-color: #5865F2;
+  box-shadow: 0 4px 10px rgba(88, 101, 242, 0.2);
+
+  &:hover {
+    background-color: darken(#5865F2, 5%);
+  }
+}
+
+// Discord Dedicated Section
+.discord-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 50px 30px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+
+  h2 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-color);
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Video/YouTube Section
+.youtube-actions {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  // Override the default button margin so it aligns properly with the iframe
+  .btn-danger {
+    margin-top: 0;
+  }
+}
+
+.yt-subscribe-count {
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  iframe {
+    border: none;
+    height: 25px;
+    width: 150px; /* give it explicit width so it renders fully */
+  }
+}
+
+.playlist-container {
+  margin-top: 40px;
+  text-align: left;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+
+  h4 {
+    margin-top: 0;
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  p, ol {
+    font-size: 15px;
+    color: var(--text-muted);
+  }
+  
+  ol {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    li {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.playlist-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.01);
+  }
+}

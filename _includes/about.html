@@ -1,81 +1,20 @@
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">
-     .tab { margin-left: 40px; }
-     </style>
-
-    <style>
-        .about-me-section {
-          max-width: 960px;
-          margin: 60px auto;
-          padding: 0 20px;
-          font-family: Arial, sans-serif;
-        }
-
-        .about-me-section h1 {
-          font-size: 32px;
-          text-align: center;
-          margin-bottom: 20px;
-        }
-
-        .about-me-section p {
-          font-size: 16px;
-          line-height: 1.6;
-          color: #333;
-          text-align: left;
-          max-width: 800px;
-          margin: 0 auto 10px auto;
-        }
-
-        .about-links {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 16px;
-          margin-top: 20px;
-        }
-
-        .about-links a {
-          text-decoration: none;
-          background-color: #0052cc;
-          color: #fff;
-          padding: 12px 24px;
-          border-radius: 6px;
-          font-weight: bold;
-          transition: background 0.3s;
-        }
-
-        .about-links a:hover {
-          background-color: #003d99;
-        }
-
-        .about-links a.youtube {
-          background-color: #ff0000;
-        }
-
-        .about-links a.youtube:hover {
-          background-color: #cc0000;
-        }
-    </style>
-     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-</head>
-
-<body>
-
-<div class="about-me-section">
-    <h1>👋 About Me</h1>
-    <p>Hi there, I'm Mandeep Singh Shekhawat. </p>
-    <p>
-        I'm passionate about building simple, scalable systems. I love to explore and deep dive into large scale system architectures and think of optimizations to make them better.
-    </p>
-    <p>
-        I'm a Software Engineer, author and educator. While away from computer screen, I enjoy morning runs, weight lifting, cooking, and spending time with my family.
-    </p>
-
-    <div class="about-links">
-        <a href="/books" target="_self">📘 Read the Book</a>
-        <a href="https://www.youtube.com/@MsDeepSingh" target="_blank" class="youtube">▶️ Watch on YouTube</a>
+<section class="about-section">
+  
+  <div class="about-card">
+    <div class="about-header">
+      <h1>👋 About Me</h1>
     </div>
-</div>
+    <div class="about-body">
+      <p class="intro-text">Hi there, I'm Mandeep Singh Shekhawat.</p>
+      <p>I'm passionate about building simple, scalable systems. I love to explore and deep dive into large scale system architectures and think of optimizations to make them better.</p>
+      <p>I'm a Software Engineer, author, and educator. While away from the computer screen, I enjoy morning runs, weight lifting, cooking, and spending time with my family.</p>
+    </div>
+  </div>
 
-</body>
+  <div class="about-links">
+    <a href="/books" target="_self" class="btn-theme"><i class="fa fa-book"></i> Read the Book</a>
+    <a href="https://www.youtube.com/@MsDeepSingh" target="_blank" class="btn-theme youtube"><i class="fa fa-youtube-play"></i> Watch on YouTube</a>
+    <a href="https://systemdesignfromscratch.org/" target="_blank" class="btn-theme newsletter"><i class="fa fa-newspaper-o"></i> System Design Newsletter</a>
+  </div>
+  
+</section>

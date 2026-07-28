@@ -1,0 +1,102 @@
+// _sass/_about.scss
+
+.about-section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 50px 40px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  margin-bottom: 40px;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+}
+
+.about-header h1 {
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.about-body {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: 20px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .intro-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 25px;
+  }
+}
+
+.about-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  
+  .btn-theme {
+    text-decoration: none;
+    background-color: var(--btn-bg); // Solid primary color
+    color: var(--btn-text) !important; // Ensure text is white
+    padding: 12px 28px;
+    border-radius: 8px; // Classic button shape
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+
+    &:hover {
+      transform: translateY(-2px);
+      background-color: var(--accent-hover);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+    }
+
+    &.youtube {
+      background-color: #e52d27;
+      box-shadow: 0 4px 12px rgba(229, 45, 39, 0.25);
+      
+      &:hover {
+        background-color: #cc0000;
+        box-shadow: 0 6px 16px rgba(229, 45, 39, 0.4);
+      }
+    }
+    
+    &.newsletter {
+      background-color: #0f766e; // Sleek teal for newsletter
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+      
+      &:hover {
+        background-color: #0d9488;
+        box-shadow: 0 6px 16px rgba(15, 118, 110, 0.4);
+      }
+    }
+  }
+}

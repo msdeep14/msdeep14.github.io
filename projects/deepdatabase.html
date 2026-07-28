@@ -3,95 +3,29 @@ layout: page
 <!-- title: DeepDataBase -->
 permalink: /projects/deepdatabase
 ---
-<head>
-    <title> DeepDataBase</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style type="text/css">
-
-.ribbon {
-  background-color: #a00;
-  overflow: hidden;
-  white-space: nowrap;
-  /* top left corner */
-  position: absolute;
-  right: -50px;
-  top: 40px;
-  /* 45 deg ccw rotation */
-  -webkit-transform: rotate(45deg);
-     -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-  /* shadow */
-  -webkit-box-shadow: 0 0 10px #888;
-     -moz-box-shadow: 0 0 10px #888;
-          box-shadow: 0 0 10px #888;
-}
-.ribbon a {
-  border: 1px solid #faa;
-  color: #fff;
-  display: block;
-  font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin: 1px 0;
-  padding: 10px 50px;
-  text-align: center;
-  text-decoration: none;
-  /* shadow */
-  text-shadow: 0 0 5px #444;
-}
-
-.zoomin img {
-    height: 200px;
-     width: 200px;
-     -webkit-transition: all 2s ease;
-      -moz-transition: all 2s ease;
-      -ms-transition: all 2s ease;
-       transition: all 2s ease;
-       }
-       .zoomin img:hover {
-           width: 600px;
-           height: 600px;
-           }
-
-           .images {
-               text-align : center;
-           }
-           .images img {
-               width  : 200px;
-               height : 200x;
-               margin : 10px;
-           }
-    </style>
-</head>
-
-<body>
-    <div class="ribbon">
-  <a target="_blank" href="https://github.com/msdeep14/DeepDataBase">Fork DeepDataBase</a>
-    </div>
-        <h1>
-            <i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;<strong><a target="_blank" href="https://github.com/msdeep14/DeepDataBase">DeepDataBase</a></strong> <br/>
-        </h1>
-        <h4>
-            <p>A mini scale database engine.<br />
+<div class="project-header">
+  <h1>DeepDataBase</h1>
+  <a href="https://github.com/msdeep14/DeepDataBase" class="btn-github" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> View on GitHub</a>
+  <h4><p>A mini scale database engine.<br />
             1) System is given a touch of Relational Database where data can be stored and retrieved in the form of tables.<br />
             2) System reads data from and writes data to disk in blocks and there are custom blocks for each table.<br />
             3) Queries supported by system are SELECT, CREATE, INSERT, DROP, SHOW <br />
             4) Meta Data of tables is stored separately like current no. of records, table name, etc.<br />
             5) Indexing using B+ trees.<br />
             6) B+ tree search based on primary key and brute force search for other attributes of table <br />
-        </p>
-    </h4>
-    <div class = "images">
-     <div class="zoomin">
-         <img src="{{ site.baseurl }}/images/project_images/deepdb/startdb.png" title="start deepdb monitor" />
+        </p></h4>
+</div>
+
+<div class="project-gallery">
+<img src="{{ site.baseurl }}/images/project_images/deepdb/startdb.png" title="start deepdb monitor" />
 
          <img src="{{ site.baseurl }}/images/project_images/deepdb/create_table.png" title="create table" />
 
          <img src="{{ site.baseurl }}/images/project_images/deepdb/insert_into_table.png" title="insert into table" />
 
-         <br />
-         <br />
+         
+         
 
              <img src="{{ site.baseurl }}/images/project_images/deepdb/select*.png" title="select * clause" />
 
@@ -99,12 +33,8 @@ permalink: /projects/deepdatabase
 
              <img src="{{ site.baseurl }}/images/project_images/deepdb/select_where.png" title="select where clause" />
 
-             <br />
-             <br />
+             
+             
 
              <img src="{{ site.baseurl }}/images/project_images/deepdb/drop.png" title="drop table" />
-
-     </div>
- </div>
-
-</body>
+</div>
