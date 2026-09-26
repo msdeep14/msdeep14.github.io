@@ -8,28 +8,50 @@
   <section class="system-design-section" id="system-design">
     <h1>System Design Resources</h1>
 
-    <div class="system-design-grid">
+    <div style="display: flex; flex-direction: column; gap: 30px; margin-bottom: 40px;">
 
-      <!-- Book Box -->
-      <article class="system-box">
-        <h2><i class="fa fa-book" aria-hidden="true" style="color: #4183C4;"></i> System Design on AWS</h2>
-        <p>The ultimate 600+ pages guide to designing, implementing, understanding, building, and scaling complex
-          systems on AWS.</p>
-        <div>
-          <a href="https://amzn.to/4jExkte" target="_blank" class="btn-primary">Read the Book</a>
+      <!-- Book Box 1: System Design on AWS -->
+      <article class="system-box-horizontal">
+        <div class="book-cover">
+          <img src="{{ site.baseurl }}/images/sdoa/book_front.png" alt="System Design on AWS Cover">
+        </div>
+        <div class="book-info">
+          <h2><i class="fa fa-book" aria-hidden="true" style="color: #4183C4;"></i> System Design on AWS</h2>
+          <p>The ultimate 600+ pages guide to designing, implementing, understanding, building, and scaling complex
+            systems on AWS.</p>
+          <div>
+            <a href="https://amzn.to/4jExkte" target="_blank" class="btn-primary">Read the Book</a>
+          </div>
         </div>
       </article>
 
-      <!-- Newsletter Box -->
-      <article class="system-box">
-        <h2><i class="fa fa-newspaper-o" aria-hidden="true" style="color: #4183C4;"></i> System Design Newsletter</h2>
-        <p>Deep dive into large scale system architectures, understand the concepts from the ground up.</p>
-        <div>
-          <a href="https://systemdesignfromscratch.org/" target="_blank" class="btn-primary">Read the Newsletter</a>
+      <!-- Book Box 2: System Design from Scratch -->
+      <article class="system-box-horizontal">
+        <div class="book-cover">
+          <img src="{{ site.baseurl }}/images/sdfs/raw-cover-page-sdfs.jpg" alt="System Design from Scratch Cover">
+        </div>
+        <div class="book-info">
+          <h2><i class="fa fa-book" aria-hidden="true" style="color: #4183C4;"></i> System Design from Scratch</h2>
+          <p>As a product grows from a proof of concept to a large-scale distributed system, its design has to evolve with it. 
+            System Design from Scratch follows that process, evaluating trade-offs involving 
+            scale, cost, expertise, time to market, resilience, and operational overhead at each stage.</p>
+          <div>
+            <a href="{{ site.baseurl }}/books/system-design-from-scratch/" class="btn-primary">Read the Book</a>
+          </div>
         </div>
       </article>
 
     </div>
+
+    <!-- Newsletter Section -->
+    <section class="discord-section" id="newsletter">
+      <h2><i class="fa fa-newspaper-o" aria-hidden="true" style="color: #4183C4;"></i> System Design Newsletter</h2>
+      <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+        <iframe src="https://systemdesignfromscratch.org/embed" width="100%" height="320"
+          style="border: 1px solid #EEE; background: white; max-width: 480px; border-radius: 8px;" frameborder="0"
+          scrolling="no"></iframe>
+      </div>
+    </section>
 
     <!-- Discord Community Section -->
     <section class="discord-section" id="discord">

@@ -60,6 +60,61 @@
   }
 }
 
+// Horizontal Reusable Card Style (Float layout for text wrapping)
+.system-box-horizontal {
+  @extend .system-box;
+  display: block; /* Override flex from .system-box */
+  text-align: left;
+
+  /* Clearfix */
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .book-cover {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    width: 120px; /* Reduced cover size */
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  }
+
+  .book-info {
+    display: block;
+    
+    h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    
+    .book-cover {
+      float: none;
+      margin: 0 auto 20px auto;
+    }
+  }
+}
+
 // Action Buttons
 .btn-primary {
   display: inline-block;
